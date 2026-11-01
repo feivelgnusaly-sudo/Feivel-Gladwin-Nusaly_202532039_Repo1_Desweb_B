@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pantau Burung Kota - Lapor Pengamatan</title>
+</head>
+<body>
+  <header>
+    <h1>Lapor Pengamatan</h1>
+    <p>Isi formulir ini setelah selesai mengamati</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="spesies.html">Daftar Spesies</a></li>
+        <li><a href="lapor.html">Lapor Pengamatan</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Formulir catatan</h2>
+      <p>Semua kolom bertanda wajib harus diisi. Catatan tambahan boleh dikosongkan.</p>
+
+      <form action="#" method="get">
+        <fieldset>
+          <legend>Data pengamat</legend>
+          <p>
+            <label for="nama">Nama (wajib)</label><br>
+            <input type="text" id="nama" name="nama" minlength="3" required>
+          </p>
+          <p>
+            <label for="email">Email (wajib)</label><br>
+            <input type="email" id="email" name="email" required>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Data pengamatan</legend>
+          <p>
+            <label for="tanggal">Tanggal pengamatan (wajib)</label><br>
+            <input type="date" id="tanggal" name="tanggal" required>
+          </p>
+          <p>
+            <label for="spesies">Burung yang terlihat (wajib)</label><br>
+            <select id="spesies" name="spesies" required>
+              <option value="">-- Pilih spesies --</option>
+              <option value="gereja">Burung-gereja erasia</option>
+              <option value="cabai">Cabai jawa</option>
+              <option value="kutilang">Cucak kutilang</option>
+              <option value="perkutut">Perkutut jawa</option>
+              <option value="cekakak">Cekakak sungai</option>
+              <option value="kowak">Kowak-malam abu</option>
+            </select>
+          </p>
+          <p>
+            <label for="jumlah">Jumlah individu (wajib)</label><br>
+            <input type="number" id="jumlah" name="jumlah" min="1" max="500" required>
+          </p>
+
+          <p>Tempat pengamatan (wajib)</p>
+          <p>
+            <input type="radio" id="tempat-taman" name="tempat" value="taman" required>
+            <label for="tempat-taman">Taman atau hutan kota</label><br>
+            <input type="radio" id="tempat-air" name="tempat" value="air">
+            <label for="tempat-air">Dekat air (kali, tambak, mangrove)</label><br>
+            <input type="radio" id="tempat-rumah" name="tempat" value="rumah">
+            <label for="tempat-rumah">Sekitar rumah atau gedung</label>
+          </p>
+
+          <p>
+            <label for="catatan">Catatan tambahan</label><br>
+            <textarea id="catatan" name="catatan" rows="4" cols="40" maxlength="300"></textarea>
+          </p>
+        </fieldset>
+
+        <p>
+          <input type="checkbox" id="setuju" name="setuju" required>
+          <label for="setuju">Saya mencatat sesuai yang benar-benar saya lihat (wajib)</label>
+        </p>
+
+        <p>
+          <button type="submit">Kirim catatan</button>
+          <button type="reset">Kosongkan</button>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Pantau Burung Kota.</p>
+    <p><a href="index.html">Kembali ke beranda</a> | <a href="spesies.html">Daftar spesies</a></p>
+  </footer>
+</body>
+</html>
